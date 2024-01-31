@@ -1,22 +1,15 @@
 'use client';
 
-import { getFrameMetadata } from '@coinbase/onchainkit';
-import type { Metadata } from 'next';
-import { TouchEvent, useEffect, useState } from "react";
+import { useState } from "react";
 import {
   ActionIcon,
-  Avatar,
   Box,
   Button,
   ButtonProps,
   Container,
   Flex,
-  Group,
   MantineProvider,
-  Overlay,
   Stack,
-  TextInput,
-  Transition,
 } from "@mantine/core";
 import {
   IconCamera,
@@ -25,7 +18,6 @@ import {
   IconMicrophoneOff,
 } from "@tabler/icons-react";
 import {
-  RemoteParticipant,
   useRoomConnection,
 } from "@whereby.com/browser-sdk/react";
 import { FadeBlack } from "../_components/FadeOut/FadeOut";
@@ -38,36 +30,8 @@ const defaultButtonProps: Partial<ButtonProps> = {
   size: "lg",
 };
 
-// const frameMetadata = getFrameMetadata({
-//   buttons: [
-//     {
-//       label: 'Join video chat',
-//     },
-//   ],
-//   image: 'https://frameus.tv/park-1.png',
-//   post_url: 'https://frameus.tv/api/frame',
-// });
-
-// export const metadata: Metadata = {
-//   title: 'frameustv',
-//   description: 'video chat for farcaster',
-//   openGraph: {
-//     title: 'frameustv',
-//     description: 'video chat for farcaster',
-//     images: ['https://frameus.tv/park-1.png'],
-//   },
-//   other: {
-//     ...frameMetadata,
-//   },
-// };
-
 const ROOM_URL =
   "https://founderslog.whereby.com/first-room7ffbf431-ffc5-4fb1-bd81-3a3a3e67693f";
-
-type Position = {
-  x: number;
-  y: number;
-};
 
 export default function PublicVideoChat() {
   const roomConnection = useRoomConnection(ROOM_URL, {
@@ -84,9 +48,6 @@ export default function PublicVideoChat() {
   const [cameraOn, setCameraOn] = useState(true);
   const [micOn, setMicOn] = useState(true);
   const [leaveTransition, setLeaveTransition] = useState(false);
-  const [videoPositions, setVideoPositions] = useState<
-    Record<string, Position>
-  >({});
 
   function handleLeave() {
     setLeaveTransition(true);
