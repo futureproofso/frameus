@@ -20,9 +20,9 @@ import {
 import {
   useRoomConnection,
 } from "@whereby.com/browser-sdk/react";
-import { FadeBlack } from "../_components/FadeOut/FadeOut";
-import { VideoOther } from "../_components/Video/VideoOther";
-import { VideoSelf } from "../_components/Video/VideoSelf";
+import { FadeBlack } from "../_components/FadeOut/FadeOut.js";
+import { VideoOther } from "../_components/Video/VideoOther.js";
+import { VideoSelf } from "../_components/Video/VideoSelf.js";
 
 const defaultButtonProps: Partial<ButtonProps> = {
   color: "fl-secondary",
