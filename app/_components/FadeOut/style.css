@@ -1,0 +1,87 @@
+#bg {
+    top: 0;
+    left: 0;
+    width: 100vw;
+  height: 100vh;
+  background: #0A212E;
+  margin: 0px;
+  padding: 0px;
+  overflow: visible;
+  animation: color-loop 18s infinite;
+  position: absolute;
+  z-index: 999999999;
+  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+}
+
+.waves {
+  position: relative;
+  top: 50%;
+  background: rgba(255, 255, 255, .3);
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  margin-left: -12px;
+  margin-top: -12px;
+  border-radius: 50%;
+  -webkit-backface-visibility: hidden;
+}
+
+.waves:before {
+  position: absolute;
+  background: white;
+  margin-left: -12px;
+  margin-top: -12px;
+  width: 50px;
+  height: 50px;
+  content: "";
+  display: block;
+  border-radius: 50%;
+  -webkit-backface-visibility: hidden;
+  animation: wave-animate 3s infinite ease-out;
+}
+
+.waves:after {
+position: absolute;
+  background: white;
+  margin-left: -12px;
+  margin-top: -12px;
+  width: 50px;
+  height: 50px;
+  content: "";
+  display: block;
+  border-radius: 50%;
+  -webkit-backface-visibility: hidden;
+  opacity:0;
+  animation: wave-animate 3s 1.5s infinite ease-out;
+}
+
+@keyframes wave-animate {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+    transform-origin: center;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+    transform-origin: center;
+  }
+}
+
+@keyframes color-loop {
+  0% {
+    background: #42acf3;
+  }
+  25% {
+    background: #0a4184;
+  }
+  50% {
+    background: #0646a5;
+  }
+  75% {
+    background: #4286F3;
+  }
+  100% {
+    background: #5fb6f1;
+  }
+}
