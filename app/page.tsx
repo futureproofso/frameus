@@ -8,8 +8,8 @@ const frameMetadata = getFrameMetadata({
       label: 'Join video chat',
     },
   ],
-  image: 'https://frameus.tv/park-1.png',
-  post_url: 'https://frameus.tv/api/frame',
+  image: 'https://frameus.tv/landing.gif',
+  post_url: 'https://frameus.tv/api/login',
 });
 
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'frameustv',
     description: 'video chat for farcaster',
-    images: ['https://frameus.tv/park-1.png'],
+    images: ['https://frameus.tv/landing.gif'],
   },
   other: {
     ...frameMetadata,
