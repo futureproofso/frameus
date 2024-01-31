@@ -23,8 +23,8 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
   return new NextResponse(`<!DOCTYPE html><html><head>
     <meta property="fc:frame" content="vNext" />
     <meta property="fc:frame:image" content="https://frameus.tv/park-2.png" />
-    <meta property="fc:frame:button:0" content="Take me there" />
-    <meta property="fc:frame:button:0:action" content="post_redirect" />
+    <meta property="fc:frame:button:1" content="Take me there" />
+    <meta property="fc:frame:button:1:action" content="post_redirect" />
     <meta property="fc:frame:post_url" content="https://frameus.tv/api/chat" />
   </head></html>`);
 }
