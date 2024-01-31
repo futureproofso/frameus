@@ -2,7 +2,7 @@
   "name": "frameustv",
   "version": "0.1.2",
   "scripts": {
-    "build": "rm -rf .next && next build",
+    "build": "rm -rf .next && next experimental-compile",
     "dev": "next dev",
     "format": "prettier --log-level warn --write .",
     "start": "next start",

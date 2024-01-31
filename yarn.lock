@@ -550,7 +550,7 @@
     events "^3.3.0"
     heresy "^1.0.4"
 
-"@whereby/jslib-media@whereby/jslib-media.git#1.4.1":
+"@whereby/jslib-media@github:whereby/jslib-media#1.4.1":
   version "1.4.1"
   resolved "https://codeload.github.com/whereby/jslib-media/tar.gz/abc55b7e2d3af9c71cb3f3a2953291bb79725064"
   dependencies:
