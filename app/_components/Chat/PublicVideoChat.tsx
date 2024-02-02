@@ -89,7 +89,7 @@ export default function PublicVideoChat({ username }: PublicVideoChatProps) {
               flex: "1",
             }}
           >
-            <VideoSelf stream={localParticipant?.stream} />
+            <VideoSelf stream={localParticipant?.stream} username={username} />
             <VideoOther remoteParticipants={remoteParticipants} />
           </div>
           <Stack h="20vh">

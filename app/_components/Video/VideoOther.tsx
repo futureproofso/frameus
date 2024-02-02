@@ -1,4 +1,4 @@
-import { Box } from "@mantine/core";
+import { Badge, Box, Stack } from "@mantine/core";
 import { RemoteParticipant, VideoView } from "@whereby.com/browser-sdk/react";
 import Draggable from "react-draggable";
 
@@ -10,12 +10,13 @@ export const VideoOther = ({ remoteParticipants }: VideoOtherProps) => {
   function renderVideoOther(participant: RemoteParticipant) {
     return participant.stream ? (
       <Draggable
-        bounds="#video-box"
+        // bounds="#video-box"
         key={participant.id}
         positionOffset={{ x: "0", y: "0" }}
         // position={position}
         // onStart={() => false}
       >
+        <Stack>
         <Box
           style={{
             borderRadius: "50%",
@@ -37,6 +38,8 @@ export const VideoOther = ({ remoteParticipants }: VideoOtherProps) => {
             stream={participant.stream}
           />
         </Box>
+        <Badge color="blue" size="xl">{participant.displayName}</Badge>
+        </Stack>
       </Draggable>
     ) : null;
   }
