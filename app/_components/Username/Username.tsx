@@ -17,13 +17,13 @@ export function Username({ onDone }: UsernameProps) {
   return (
     <>
       <Modal opened={opened} onClose={close} title="Welcome to the Kernel Founder Convo!">
-        <TextInput placeholder='Enter your name' value={username} onChange={(e) => {
+        <TextInput label="Enter your name" placeholder='Name' value={username} onChange={(e) => {
             setUsername(e.target.value);
         }} />
         <Button onClick={handleDone}>Done</Button>
       </Modal>
 
-      <Button onClick={open}>Open modal</Button>
+      <Button onClick={open}>Join the Kernel Founder Convo</Button>
     </>
   );
 }
