@@ -23,7 +23,7 @@ import {
 import { FadeBlack } from "../FadeOut/FadeOut";
 import { VideoOther } from "../Video/VideoOther";
 import { VideoSelf } from "../Video/VideoSelf";
-
+import { Chat } from "./Chat";
 
 const defaultButtonProps: Partial<ButtonProps> = {
   color: "fl-secondary",
@@ -93,6 +93,10 @@ export default function PublicVideoChat({ username }: PublicVideoChatProps) {
             <VideoOther remoteParticipants={remoteParticipants} />
           </div>
           <Stack h="20vh">
+            <Chat
+              sendChatMessage={sendChatMessage}
+              chatMessages={chatMessages}
+            />
             <Flex align="left" justify={"space-around"} gap="lg" px="sm">
               <Button
                 {...defaultButtonProps}

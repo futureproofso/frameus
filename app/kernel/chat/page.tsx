@@ -37,13 +37,12 @@ const ROOM_URL =
   "https://founderslog.whereby.com/first-room7ffbf431-ffc5-4fb1-bd81-3a3a3e67693f";
 
 export default function KernelChat() {
-  const [username, setUsername] = useState<string | undefined>();
+  const [username, setUsername] = useState<string>("");
 
   return (
     <>
     <MantineProvider>
-      {!username && <Username onDone={setUsername} />}
-      {username && <PublicVideoChat username={username} />}
+      {username == "" ? <Username onDone={setUsername} /> : <PublicVideoChat username={username} />}
     </MantineProvider>
     </>
   );
